@@ -1,4 +1,9 @@
-# Reproducible Research: Peer Assessment 1
+---
+title: "Reproducible Research: Peer Assessment 1"
+output: 
+  html_document:
+    keep_md: true
+---
 
 
 ## Loading and preprocessing the data
@@ -42,7 +47,7 @@ totalStepsPerDay <- aggregate(steps ~ date, data = activity, sum, na.rm = TRUE)
 hist(totalStepsPerDay$steps, main = "Total steps by day", xlab = "Day", ylab = "Total Steps", col = "blue")
 ```
 
-![](PA1_template_files/figure-html/unnamed-chunk-4-1.png) 
+![plot of chunk unnamed-chunk-4](figure/unnamed-chunk-4-1.png) 
 
 **The mean for total teps per day is calculated below**
 
@@ -76,7 +81,7 @@ plot(avgStepsPerInterval, type = "l", xlab = "5 minute intervals",
     ylab = "Average across all Days", main = "Average number of steps taken", col = "blue")
 ```
 
-![](PA1_template_files/figure-html/unnamed-chunk-8-1.png) 
+![plot of chunk unnamed-chunk-8](figure/unnamed-chunk-8-1.png) 
 
 **The time interval with the maximum number of steps is**
 
@@ -116,7 +121,7 @@ ttspdComplete <- aggregate(steps ~ date, data = completeActivityData, sum, na.rm
 hist(ttspdComplete$steps, main = "Total steps by day", xlab = "Day", ylab = "Total Steps", col = "blue")
 ```
 
-![](PA1_template_files/figure-html/unnamed-chunk-12-1.png) 
+![plot of chunk unnamed-chunk-12](figure/unnamed-chunk-12-1.png) 
 
 **Mean of total steps per day using complete data set**
 
@@ -155,5 +160,5 @@ xyplot(steps ~ interval | dayType, stepsByDayType, type = "l", layout = c(1, 2),
     xlab = "Interval", ylab = "Number of steps")
 ```
 
-![](PA1_template_files/figure-html/unnamed-chunk-16-1.png) 
+![plot of chunk unnamed-chunk-16](figure/unnamed-chunk-16-1.png) 
 
